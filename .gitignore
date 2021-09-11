@@ -2,6 +2,9 @@
 # functions/
 #
 functions/.gradle/
+functions/bin/
+functions/build
+.gradle
 
 
 #
