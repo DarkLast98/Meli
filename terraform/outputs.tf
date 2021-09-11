@@ -7,5 +7,6 @@ output "project-id" {
 }
 
 output "function-entrypoint" {
-  value = google_cloudfunctions_function.function.https_trigger_url
+  value = data.google_project.this.project_id
+  // value = google_cloudfunctions_function.function.https_trigger_url
 }
