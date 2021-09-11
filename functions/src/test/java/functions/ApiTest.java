@@ -15,6 +15,8 @@ import org.junit.runners.JUnit4;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import functions.Api;
+
 @RunWith(JUnit4.class)
 public class ApiTest {
     @Mock private HttpRequest request;
@@ -33,8 +35,8 @@ public class ApiTest {
     }
   
     @Test
-    public void helloWorldTest() throws IOException {
-      new HelloWorld().service(request, response);
+    public void apiTest() throws IOException {
+      new Api().service(request, response);
   
       writerOut.flush();
       assertThat(responseOut.toString()).contains("Hello World!");
