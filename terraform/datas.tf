@@ -5,7 +5,7 @@
  */
 data "archive_file" "source" {
   type        = "zip"
-  source_dir  = abspath("../functions/build/")
+  source_dir  = abspath("../functions/")
   output_path = "/tmp/functions.zip"
 }
 
