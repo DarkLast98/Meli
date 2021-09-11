@@ -1,0 +1,14 @@
+# Local test
+# gcloud builds submit --config=cloudbuild.yaml
+steps:
+  - id: Terraform Init
+    name: hashicorp/terraform
+    args: ['init']
+    dir: 'terraform'
+
+  - id: Terraform Apply
+    name: hashicorp/terraform
+    args: ['apply', '-auto-approve']
+    dir: 'terraform'
+
+tags: ['meli', 'deploy']
