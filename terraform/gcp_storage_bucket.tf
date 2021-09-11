@@ -1,6 +1,6 @@
 resource "google_storage_bucket" "functions" {
   project       = var.project_id
-  name          = "gcf-sources-${var.project_id}-${var.region}"
+  name          = "gcf-sources-${data.google_project.this.number}-${var.region}"
   location      = var.region
   force_destroy = true
 

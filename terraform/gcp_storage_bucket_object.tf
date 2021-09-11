@@ -6,5 +6,5 @@
 resource "google_storage_bucket_object" "archive" {
   name   = "meli-functions.zip${data.archive_file.source.output_md5}"
   bucket = google_storage_bucket.bucket.name
-  source   = data.archive_file.source.output_path
+  source = data.archive_file.source.output_path
 }
