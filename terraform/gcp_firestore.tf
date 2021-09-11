@@ -3,8 +3,10 @@
  *
  * @see https://cloud.google.com/firestore/docs/solutions/automate-database-create
  */
-resource "google_project_service" "firestore" {
-  service                    = "firestore.googleapis.com"
+resource "google_project_service" "firestore_services" {
+  for_each = toset(["firestore.googleapis.com", "appengine.googleapis.com"])
+
+  service                    = each.key
   project                    = var.project_id
   disable_dependent_services = true
 }
