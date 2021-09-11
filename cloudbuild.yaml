@@ -23,6 +23,15 @@ steps:
     waitFor: ['-']
 
   #
+  # Generate coverage report
+  #
+  # - id: Generate Coverage
+  #   name: gradle:7.2-jdk11
+  #   args: ['Test:Coverage']
+  #   dir: 'functions'
+  #   waitFor: ['-']
+
+  #
   # Apply Terraform changes
   #
   - id: Terraform Apply
