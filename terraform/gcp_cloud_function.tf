@@ -2,16 +2,15 @@
  * Provision Api function
  *
  * @see https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/cloudfunctions_function
+ * @se https://cloud.google.com/functions/docs/concepts/exec#runtimes
  */
 resource "google_cloudfunctions_function" "function" {
   name                  = "api"
   description           = "Meli Functions Api"
   source_archive_bucket = google_storage_bucket.functions.name
   source_archive_object = google_storage_bucket_object.archive.name
-  runtime               = "nodejs14"
+  runtime               = "java11"
   project               = var.project_id
-  available_memory_mb   = 256
-  timeout               = 60
   trigger_http          = true
   entry_point           = "api"
 

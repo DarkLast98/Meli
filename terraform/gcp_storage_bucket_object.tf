@@ -4,7 +4,7 @@
  * @see https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_object
  */
 resource "google_storage_bucket_object" "archive" {
-  name   = "functions.zip"
-  source = "${path.module}/files/functions.zip"
-  bucket = google_storage_bucket.functions.name
+  name   = "meli-functions.zip${data.archive_file.source.output_md5}"
+  bucket = google_storage_bucket.bucket.name
+  source   = data.archive_file.source.output_path
 }

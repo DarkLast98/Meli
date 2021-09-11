@@ -1,8 +1,8 @@
-  
+
 terraform {
   backend "gcs" {
-    bucket  = "terraform-api-mutant"
-    prefix  = "terraform/state"
+    bucket = "terraform-api-mutant"
+    prefix = "terraform/state"
   }
 
   required_providers {

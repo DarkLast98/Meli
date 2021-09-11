@@ -23,6 +23,6 @@ variable "project_id" {
 
 variable "location_id" {
   type        = string
-  default     = "us-central"
+  default     = "us-east"
   description = "Location id"
 }
