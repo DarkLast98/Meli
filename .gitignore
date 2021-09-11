@@ -5,6 +5,7 @@ functions/.gradle/
 functions/bin/
 functions/build
 .gradle
+.idea
 
 
 #
