@@ -1,7 +1,7 @@
   
 terraform {
   backend "gcs" {
-    bucket  = "daniel-meli-dna-test"
+    bucket  = "terraform-api-mutant"
     prefix  = "terraform/state"
   }
 
