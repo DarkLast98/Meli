@@ -9,7 +9,7 @@ resource "google_cloudfunctions_function" "function" {
   description           = "Meli Functions Api"
   source_archive_bucket = google_storage_bucket.functions.name
   source_archive_object = google_storage_bucket_object.archive.name
-  runtime               = "java11"
+  runtime               = var.runtime
   project               = var.project_id
   trigger_http          = true
   entry_point           = "api"

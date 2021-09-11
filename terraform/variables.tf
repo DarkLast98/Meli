@@ -12,12 +12,13 @@ variable "memory" {
 
 variable "runtime" {
   type        = string
-  default     = "nodejs14"
+  default     = "java11"
   description = "Function runtime name"
 }
 
 variable "project_id" {
   type        = string
+  default = "meli-api-mutant"
   description = "Project id"
 }
 
