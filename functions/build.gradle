@@ -9,9 +9,6 @@ configurations {
 }
 
 dependencies {
-  // https://mvnrepository.com/artifact/com.google.cloud.functions/functions-framework-api
-implementation 'com.google.cloud.functions:functions-framework-api:1.0.4'
-
   // Every function needs this dependency to get the Functions Framework API.
   compileOnly 'com.google.cloud.functions:functions-framework-api:1.0.4'
 
