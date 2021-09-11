@@ -1,14 +1,34 @@
 # Local test
 # gcloud builds submit --config=cloudbuild.yaml
 steps:
+  #
+  # Init Terraform sources
+  #
   - id: Terraform Init
     name: hashicorp/terraform
     args: ['init']
     dir: 'terraform'
+    waitFor: ['-']
 
+  #
+  # Build Java functions
+  # 
+  # @see https://hub.docker.com/_/gradle
+  #
+  - id: Java Build
+    name: gradle:7.2-jdk11
+    entrypoint: gradle
+    args: ['build']
+    dir: 'functions'
+    waitFor: ['-']
+
+  #
+  # Apply Terraform changes
+  #
   - id: Terraform Apply
     name: hashicorp/terraform
     args: ['apply', '-auto-approve']
     dir: 'terraform'
+    waitFor: ['Terraform Init', 'Java Build']
 
 tags: ['meli', 'deploy']

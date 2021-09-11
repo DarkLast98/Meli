@@ -1,1 +1,10 @@
-.gradle
+#
+# functions/
+#
+functions/.gradle/
+
+
+#
+# terraform/
+#
+terraform/.terraform/

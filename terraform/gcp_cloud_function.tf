@@ -12,7 +12,7 @@ resource "google_cloudfunctions_function" "function" {
   runtime               = var.runtime
   project               = var.project_id
   trigger_http          = true
-  entry_point           = "api"
+  entry_point           = "functions.Api"
 
   environment_variables = {
     FIREBASE_CONFIG = jsonencode({

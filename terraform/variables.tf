@@ -18,7 +18,7 @@ variable "runtime" {
 
 variable "project_id" {
   type        = string
-  default = "meli-api-mutant"
+  default     = "meli-api-mutant"
   description = "Project id"
 }
 
