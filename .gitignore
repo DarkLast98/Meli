@@ -12,3 +12,4 @@ functions/build
 # terraform/
 #
 terraform/.terraform/
+terraform/.terraform.lock.hcl
