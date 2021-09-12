@@ -1,9 +1,9 @@
-package com.meli.functions;
+package functions;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "com.meli.functions")
+@SpringBootApplication(scanBasePackages = "functions")
 public class Api {
 
 	public static void main(String[] args) {
