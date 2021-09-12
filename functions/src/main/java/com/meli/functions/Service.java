@@ -1,4 +1,4 @@
-package com.meli.dnaanalizer;
+package com.meli.functions;
 
 import com.google.cloud.functions.HttpFunction;
 import com.google.cloud.functions.HttpRequest;

@@ -16,7 +16,7 @@ resource "google_cloudfunctions_function" "function" {
 
   environment_variables = {
     FIREBASE_CONFIG = jsonencode({
-      "projectId" : var.project_id
+      "projectId" : functions.project_id
       "storageBucket" : "",
       "locationId" : var.location_id
     })
