@@ -1,14 +1,13 @@
-package com.meli.functions;
+package meli.functions;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiTests {
+class ApplicationTests {
 
-//	@Test
-//	void contextLoads() {
-
-//	}
+	@Test
+	void contextLoads() {
+	}
 
 }
