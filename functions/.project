@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>functions</name>
+	<name>dnaanalizer</name>
 	<comment>Project functions created by Buildship.</comment>
 	<projects>
 	</projects>
@@ -22,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1631392183190</id>
+			<id>1631420392817</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
