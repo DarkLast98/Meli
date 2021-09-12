@@ -17,13 +17,13 @@ resource "google_project_service" "firestore_services" {
  * @see https://cloud.google.com/firestore/docs/solutions/automate-database-create
  * @see https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/app_engine_application
  */
-resource "google_app_engine_application" "firestore_services" {
+resource "google_app_engine_application" "firestore" {
   provider      = google-beta
   project       = var.project_id
   location_id   = var.region
   database_type = "CLOUD_FIRESTORE"
 
   depends_on = [
-     google_project_service.firestore_services
+     google_project_service.firestore
   ]
 }
