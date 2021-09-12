@@ -79,6 +79,6 @@ test {
 	useJUnitPlatform()
 }
 
-// war {
-//     enabled true
-// }
+jar {
+    enabled true
+}
